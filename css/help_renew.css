@@ -2,31 +2,6 @@
 
 @import url("reset.css");
 
-/* @font-face {
-    font-family: 'S-CoreDream-3Light';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'S-CoreDream-4Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'S-CoreDreabm-5Medium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'S-CoreDream-6Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-} */
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
 .sc04 {
@@ -65,22 +40,15 @@ body.wbba {
   width: 100%;
   margin: 5.5% auto 0;
   background-color: #f7f7f7;
-  border-radius: 20px;
+  border-radius: 4px;
 }
 .contents {
-  /* padding: 8%; */
-  overflow: hidden;
+  padding: 3%;
 }
-
-.top_sec {
-  padding: 7% 6% 0;
-  content: "";
-  display: block;
-  clear: both;
+.top_sec{
+  display: flex;
 }
-
 .top_txt {
-  float: left;
   width: 56%;
 }
 .top_txt.w100 {
@@ -103,7 +71,6 @@ body.wbba {
   text-align: left;
 }
 .top_img {
-  float: left;
   width: 44%;
 }
 .blind {
@@ -252,6 +219,9 @@ body.wbba {
 }
 
 @media (max-width: 500px) {
+  .contents {
+    padding: 8% 4% 0;
+  }
   .top_txt {
     padding-left: 3%;
   }
@@ -314,8 +284,4 @@ body.wbba {
     font-size: 10px;
   }
 }
-@media (max-width: 376px) {
-  .contents {
-    padding: 8% 4%;
-  }
-}
+
