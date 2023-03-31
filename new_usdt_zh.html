@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tether</title>
+    <link
+      rel="stylesheet"
+      href="https://buyaladdin-app.s3.ap-northeast-2.amazonaws.com/buyaladdin-shopping-app/help/css/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://buyaladdin-app.s3.ap-northeast-2.amazonaws.com/buyaladdin-shopping-app/help/css/help_renew.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="wbba">
+    <div id="container">
+      <!-- help_background -->
+      <div class="help_bg por">
+        <!-- contents -->
+        <div class="contents">
+          <div class="top_sec">
+            <div class="top_txt">
+              <div class="txt_inner">
+                <h1 class="help_title sc06">Tether</h1>
+                <h3 class="help_subtit sc03">
+                  Tether 是可以在Buyaladdin 应用程序中 使用的商品.
+                </h3>
+              </div>
+            </div>
+            <div class="top_img por">
+              <div class="cir poa">
+                <div class="blind poa">
+                  <img
+                    src="https://buyaladdin-app.s3.ap-northeast-2.amazonaws.com/buyaladdin-shopping-app/help/img/usdt.png"
+                    alt="Tether"
+                    class="card_img poa"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="qna_sec">
+            <div class="qna_lst">
+              <div class="qus por bef sc04">
+                能把我保有的USDT(泰达币)重新传送到我的钱包吗?<i class="qus_arrow down poa"></i>
+              </div>
+              <div class="ans">
+                <div class="ans_inner">
+                  <p class="sc04">
+                    是的，"发送"是通过Buyaladdin的批准程序发送到外部钱包中的。<br />
+                    要求"发送"时，会收取手续费。 留存数量少于包括手续费在内的寄出数量时,无法进行"发送"<br />
+                    请求"发送"时，批审流程至少需要24小时至48小时。<br />
+                    批准完成后，将按照自动系统要求的数量发送到要接受的钱包地址。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="qna_lst">
+              <div class="qus por bef sc04">
+                我想了解关于“发送”的使用指南.<i class="qus_arrow down poa"></i>
+              </div>
+              <div class="ans">
+                <div class="ans_inner">
+                  <p class="sc04">
+                    请参考下面的指南。<br />
+                    为了将Buyaladdin卡内的USDT发送到用户虚拟货币钱包,请点击"发送"按钮。<br />
+                    申请"发送"时,将遵循Buyaladdin的批准程序,请在"发送批准"上点击"同意"按钮。<br />
+                    请输入要发送的用户密码货币钱包地址。（可输入二维码）<br />
+                    请输入要发送的数量。 美元是自动计算后标记的。<br />
+                    请输入邮箱地址后，完成认证。 电子邮件只能通过在Buyaladdin注册的电子邮件进行认证。<br />
+                    点击"发送"按钮时，按要求数量发送到输入的钱包地址。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="qna_lst">
+              <div class="qus por bef sc04">
+                我在进行“发送”中也可以继续使用虚拟货币吗？<i class="qus_arrow down poa"></i>
+              </div>
+              <div class="ans">
+                <div class="ans_inner">
+                  <p class="sc04">
+                    对，是可以的。发送USDT时，在发送处理完成之前，无法进行追加发送。（其它虚拟货币可正常使用）
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //help_background -->
+    </div>
+
+    <!-- script -->
+    <script>
+      var acc = document.getElementsByClassName("qus"); //아코디언클래스리스트를 가져온다.
+      var i;
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          //클릭이벤트를 추가한다.
+          this.classList.toggle("active"); //클래스를 추가하거나 삭제함.
+
+          var panel = this.nextElementSibling; //현재 아코디언의 다음노트를 가져온다. ans이 옴
+          if (panel.style.height === "100px") {
+            //출력모드가 블럭인지 none인지 체크한다.
+            panel.style.height = "0px";
+          } else {
+            panel.style.height = "100px";
+          }
+        });
+      }
+    </script>
+    <!-- //script -->
+  </body>
+</html>

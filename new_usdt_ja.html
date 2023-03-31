@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tether</title>
+    <link
+      rel="stylesheet"
+      href="https://buyaladdin-app.s3.ap-northeast-2.amazonaws.com/buyaladdin-shopping-app/help/css/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://buyaladdin-app.s3.ap-northeast-2.amazonaws.com/buyaladdin-shopping-app/help/css/help_renew.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="wbba">
+    <div id="container">
+      <!-- help_background -->
+      <div class="help_bg por">
+        <!-- contents -->
+        <div class="contents">
+          <div class="top_sec">
+            <div class="top_txt">
+              <div class="txt_inner">
+                <h1 class="help_title sc06">Tether</h1>
+                <h3 class="help_subtit sc03">
+                  Tetherは Buyaladdin アプリ内で 使用可能な物品です
+                </h3>
+              </div>
+            </div>
+            <div class="top_img por">
+              <div class="cir poa">
+                <div class="blind poa">
+                  <img
+                    src="https://buyaladdin-app.s3.ap-northeast-2.amazonaws.com/buyaladdin-shopping-app/help/img/usdt.png"
+                    alt="Tether"
+                    class="card_img poa"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="qna_sec">
+            <div class="qna_lst">
+              <div class="qus por bef sc04">
+                保有USDT(Tether)を第財布に再送信することができますか？<i class="qus_arrow down poa"></i>
+              </div>
+              <div class="ans">
+                <div class="ans_inner">
+                  <p class="sc04">
+                    はい、「送る」は、バイアラジンの承認手続きにより、外部のウォレットに送信されます。<br />
+                    「送る」を要請すると、手数料が請求されます。保有数量が手数料を含めた送信数量よりも少ない場合、「送る」ことはできません。<br />
+                    「送る」を要請すると、承認手続きのため、最低24時間～最大48時間がかかる場合があります。<br />
+                    承認が完了した後、自動システムにより、要求された数量だけ入力されたウォレットアドレスに送信されます。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="qna_lst">
+              <div class="qus por bef sc04">
+                「送る」利用ガイドを知りたいです。<i class="qus_arrow down poa"></i>
+              </div>
+              <div class="ans">
+                <div class="ans_inner">
+                  <p class="sc04">
+                    下のガイドをご覧ください。<br />
+                    バイアラジンカード内のUSDTをユーザーのウォレットに送信するために「送る」ボタンをクリックしてください。<br />
+                    「送る」を要請する際、バイアラジンの承認手続きに従い、「送信承認」に「同意」ボタンをクリックしてください。<br />
+                    送り先のユーザーウォレットアドレスを入力してください。（QRコードで入力可能）<br />
+                    送信数量を入力してください。米ドルは自動計算され表記されます。<br />
+                    メールアドレス入力後、認証を完了させてください。メールアドレスは、バイアラジンに登録したメールアドレスでのみ認証可能です。<br />
+                    「送る」ボタンをクリックすると、要請された数量だけ、入力されたウォレットアドレスに送信されます。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="qna_lst">
+              <div class="qus por bef sc04">
+                「送る」を行った後も仮想通貨の利用は可能ですか？<i class="qus_arrow down poa"></i>
+              </div>
+              <div class="ans">
+                <div class="ans_inner">
+                  <p class="sc04">
+                    はい、可能です。USDTを 「送る」時、送信処理が完了するまでは追加の「送る」は出来ません。(他の仮想通貨は正常に利用可能です。)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //help_background -->
+    </div>
+
+    <!-- script -->
+    <script>
+      var acc = document.getElementsByClassName("qus"); //아코디언클래스리스트를 가져온다.
+      var i;
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          //클릭이벤트를 추가한다.
+          this.classList.toggle("active"); //클래스를 추가하거나 삭제함.
+
+          var panel = this.nextElementSibling; //현재 아코디언의 다음노트를 가져온다. ans이 옴
+          if (panel.style.height === "100px") {
+            //출력모드가 블럭인지 none인지 체크한다.
+            panel.style.height = "0px";
+          } else {
+            panel.style.height = "100px";
+          }
+        });
+      }
+    </script>
+    <!-- //script -->
+  </body>
+</html>

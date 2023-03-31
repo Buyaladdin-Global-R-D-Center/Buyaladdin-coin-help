@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tether</title>
+    <link
+      rel="stylesheet"
+      href="https://buyaladdin-app.s3.ap-northeast-2.amazonaws.com/buyaladdin-shopping-app/help/css/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://buyaladdin-app.s3.ap-northeast-2.amazonaws.com/buyaladdin-shopping-app/help/css/help_renew.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="container">
+      <!-- help_background -->
+      <div class="help_bg por">
+        <!-- contents -->
+        <div class="contents">
+          <div class="top_sec">
+            <div class="top_txt">
+              <div class="txt_inner">
+                <h1 class="help_title sc06">Tether</h1>
+                <h3 class="help_subtit sc03">
+                  Tether is the exclusive currency that is used for making
+                  purchases.
+                </h3>
+              </div>
+            </div>
+            <div class="top_img por">
+              <div class="cir poa">
+                <div class="blind poa">
+                  <img
+                    src="https://buyaladdin-app.s3.ap-northeast-2.amazonaws.com/buyaladdin-shopping-app/help/img/usdt.png"
+                    alt="Tether"
+                    class="card_img poa"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="qna_sec">
+            <div class="qna_lst">
+              <div class="qus por bef sc04">
+                Is it possible to ‘Resend’ USDT(Tether) to my wallet?<i class="qus_arrow down poa"></i>
+              </div>
+              <div class="ans">
+                <div class="ans_inner">
+                  <p class="sc04">
+                    Yes, 'Send' USDT will be sent to the external wallet by approval process of Buyaladdin.<br />
+                    Once you request ‘Send’, the transaction fee will be charged. Therefore, if amount you have is less than the amount of sending plus the fee, it will be impossible to 'Send' the amount.<br />
+                    Once you request ‘Send’, it may take 24 to 48 hours due to the approval process.<br />
+                    After you got approved, the amount you requested will be automatically sent to the wallet address.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="qna_lst">
+              <div class="qus por bef sc04">
+                Is there a user guide for ‘Send’?<i class="qus_arrow down poa"></i>
+              </div>
+              <div class="ans">
+                <div class="ans_inner">
+                  <p class="sc04">
+                    Please refer to the following below.<br />
+                    Click 'Send' button to send USDT you have in Buyaladdin to your cryptocurrency wallet.<br />
+                    Once you request 'Send', please click 'Agree' button on the approval pop-up page according to the approval process of Buyaladdin.<br />
+                    Enter Cryptocurrency Wallet Address to send. (QR code is available)<br />
+                    Enter the amount of USDT. Dollar will be automatically calculated and displayed.<br />
+                    Please enter your email address and complete the verification. Registered email with Buyaladdin can only be verified.<br />
+                    Once you click ‘Send’ button, the requested amount will be sent to the wallet address.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="qna_lst">
+              <div class="qus por bef sc04">
+                Can I use the other currency after ‘Send’ request?<i class="qus_arrow down poa"></i>
+              </div>
+              <div class="ans">
+                <div class="ans_inner">
+                  <p class="sc04">
+                    Yes, please note that when you request to ‘Send’ USDT, the additional ‘Send’ request is unavailable until the previous request is completed. (It is possible to use other currency.) 
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //help_background -->
+    </div>
+
+    <!-- script -->
+    <script>
+      var acc = document.getElementsByClassName("qus"); //아코디언클래스리스트를 가져온다.
+      var i;
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          //클릭이벤트를 추가한다.
+          this.classList.toggle("active"); //클래스를 추가하거나 삭제함.
+
+          var panel = this.nextElementSibling; //현재 아코디언의 다음노트를 가져온다. ans이 옴
+          if (panel.style.height === "100px") {
+            //출력모드가 블럭인지 none인지 체크한다.
+            panel.style.height = "0px";
+          } else {
+            panel.style.height = "100px";
+          }
+        });
+      }
+    </script>
+    <!-- //script -->
+  </body>
+</html>

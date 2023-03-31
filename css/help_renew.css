@@ -1,0 +1,321 @@
+@charset "UTF-8";
+
+@import url("reset.css");
+
+/* @font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDreabm-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+.sc04 {
+  font-weight: 400;
+}
+.sc06 {
+  font-weight: 700;
+}
+.fwb {
+  font-weight: bold;
+}
+
+.por {
+  position: relative;
+}
+.poa {
+  position: absolute;
+}
+.bef::before {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  word-break: keep-all;
+}
+body.wbba {
+  word-break: break-all;
+}
+#container {
+  padding: 0 5.5%;
+}
+.help_bg {
+  width: 100%;
+  margin: 5.5% auto 0;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+}
+.contents {
+  /* padding: 8%; */
+  overflow: hidden;
+}
+
+.top_sec {
+  padding: 7% 6% 0;
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.top_txt {
+  float: left;
+  width: 56%;
+}
+.top_txt.w100 {
+  float: none;
+  width: 100%;
+}
+.txt_inner {
+  display: inline-block;
+}
+.help_title {
+  font-size: 34px;
+  color: #131313;
+  margin-bottom: 8px;
+  text-align: left;
+}
+.help_subtit {
+  font-size: 16px;
+  color: #1f1f1f;
+  line-height: 1.5;
+  text-align: left;
+}
+.top_img {
+  float: left;
+  width: 44%;
+}
+.blind {
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background-color: transparent;
+  border-radius: 0 50% 50% 0;
+  overflow: hidden;
+}
+.cir {
+  top: 0;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+}
+.card_img {
+  width: 220px;
+  left: 50%;
+  top: 7px;
+  bottom: 0;
+  margin: auto;
+  animation: slideCard 2s ease-in forwards;
+  -webkit-animation: slideCard 0.5s ease-in forwards;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
+.qna_sec {
+  margin-top: 40px;
+}
+.qna_sec.nomt {
+  margin-top: 0;
+}
+.qna_lst {
+  border-top: 1px solid #d5d5d5;
+}
+.qna_lst:nth-child(1) {
+  border-top: none;
+}
+.qus {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #d5d5d5;
+  font-size: 16px;
+  color: #6a6a6a;
+  text-align: left;
+  padding: 18px 40px;
+  word-break: break-all;
+  line-height: 16.8px;
+}
+
+.qus::before {
+  left: 10px;
+  top: 0px;
+  margin: auto;
+  bottom: 0px;
+  width: 28px;
+  height: 28px;
+  background-image: url(https://buyaladdin-app.s3.ap-northeast-2.amazonaws.com/buyaladdin-shopping-app/help/img/faq_icon_grey.png);
+  background-size: cover;
+}
+.qus:hover {
+  cursor: pointer;
+}
+.qus_arrow {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url(https://buyaladdin-app.s3.ap-northeast-2.amazonaws.com/buyaladdin-shopping-app/help/img/ar_down.png);
+  background-size: cover;
+}
+.qus.active {
+  color: #1f1f1f;
+  font-weight: bold;
+}
+.qus.active::before {
+  background-image: url(https://buyaladdin-app.s3.ap-northeast-2.amazonaws.com/buyaladdin-shopping-app/help/img/faq_icon.png);
+}
+.qus.active .qus_arrow {
+  background-image: url(https://buyaladdin-app.s3.ap-northeast-2.amazonaws.com/buyaladdin-shopping-app/help/img/ar_up.png);
+}
+.ans {
+  height: 0;
+  overflow-y: scroll;
+  transition: 0.2s ease-in;
+}
+.ans_inner {
+  padding: 25px 40px;
+}
+.ans p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  word-break: break-all;
+}
+.ans p.sc06 {
+  margin-bottom: 5px;
+}
+.ans .dot {
+  padding-left: 8px;
+  position: relative;
+}
+.ans .num {
+  padding-left: 8px;
+  position: relative;
+}
+.ans .dot::before {
+  left: 0;
+  top: 10px;
+  width: 2px;
+  height: 2px;
+  background-color: #131313;
+}
+.help_notice {
+  font-size: 13px;
+  text-align: center;
+  margin: 15px 0;
+  color: #6a6a6a;
+}
+.highlight {
+  font-weight: bold;
+  color: #48226c;
+}
+
+@-webkit-keyframes slideCard {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes slideCard {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .top_txt {
+    padding-left: 3%;
+  }
+  .help_title {
+    font-size: 22px;
+    line-height: 16.8px;
+  }
+  .help_subtit {
+    font-size: 12px;
+    line-height: 16.8px;
+  }
+  .cir {
+    right: 0;
+    width: 98px;
+    height: 98px;
+    margin-right: 5%;
+  }
+  .blind {
+    width: 98px;
+    height: 98px;
+  }
+  .card_img {
+    width: 140px;
+  }
+
+  .top_sec::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .qna_sec {
+    margin-top: 40px;
+    padding: 0 2.5% 13%;
+  }
+  .qus {
+    font-size: 12px;
+    padding: 14px 36px;
+    color: #888;
+  }
+  .qus::before {
+    width: 24px;
+    height: 24px;
+  }
+  .qus_arrow {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  .ans_inner {
+    padding: 24px;
+  }
+  .ans p {
+    font-size: 12px;
+  }
+  .ans .dot::before {
+    top: 6px;
+  }
+  .help_notice {
+    font-size: 10px;
+  }
+}
+@media (max-width: 376px) {
+  .contents {
+    padding: 8% 4%;
+  }
+}

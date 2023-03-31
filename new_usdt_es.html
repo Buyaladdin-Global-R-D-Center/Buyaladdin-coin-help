@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tether</title>
+    <link
+      rel="stylesheet"
+      href="https://buyaladdin-app.s3.ap-northeast-2.amazonaws.com/buyaladdin-shopping-app/help/css/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://buyaladdin-app.s3.ap-northeast-2.amazonaws.com/buyaladdin-shopping-app/help/css/help_renew.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="container">
+      <!-- help_background -->
+      <div class="help_bg por">
+        <!-- contents -->
+        <div class="contents">
+          <div class="top_sec">
+            <div class="top_txt">
+              <div class="txt_inner">
+                <h1 class="help_title sc06">Tether</h1>
+                <h3 class="help_subtit sc03">
+                  Tether es la moneda exclusiva que se utiliza para realizar
+                  compras.
+                </h3>
+              </div>
+            </div>
+            <div class="top_img por">
+              <div class="cir poa">
+                <div class="blind poa">
+                  <img
+                    src="https://buyaladdin-app.s3.ap-northeast-2.amazonaws.com/buyaladdin-shopping-app/help/img/usdt.png"
+                    alt="Tether"
+                    class="card_img poa"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="qna_sec">
+            <div class="qna_lst">
+              <div class="qus por bef sc04">
+                ¿Es posible “Reenviar” USDT(Tether) a mi billetera?<i class="qus_arrow down poa"></i>
+              </div>
+              <div class="ans">
+                <div class="ans_inner">
+                  <p class="sc04">
+                    Sí, 'Enviar' USDT se enviará a la billetera externa mediante el proceso de aprobación de Buyaladdin.<br />
+                    Una vez que solicite 'Enviar', se cobrará la tarifa de transacción. Por lo tanto, si la cantidad que tiene es menor que la cantidad de envío más la tarifa, será imposible 'Enviar' la cantidad.<br />
+                    Una vez que solicite 'Enviar', puede demorar de 24 a 48 horas debido al proceso de aprobación.<br />
+                    Una vez que haya sido aprobado, la cantidad que solicitó se enviará automáticamente a la dirección de la billetera.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="qna_lst">
+              <div class="qus por bef sc04">
+                Existe una guía de usuario para “Enviar”?<i class="qus_arrow down poa"></i>
+              </div>
+              <div class="ans">
+                <div class="ans_inner">
+                  <p class="sc04">
+                    Por favor, consulte lo siguiente a continuación.<br />
+                    Haga clic en el botón 'Enviar' para enviar USDT que tiene en Buyaladdin a su billetera de criptomonedas.<br />
+                    Una vez que solicite 'Enviar', haga clic en el botón 'Aceptar' en la página emergente de aprobación de acuerdo con el proceso de aprobación de Buyaladdin.<br />
+                    Ingrese la dirección de la billetera de criptomonedas para enviar. (El código QR está disponible)<br />
+                    Ingrese la cantidad de USDT. El Dólar se calculará y mostrará automáticamente.<br />
+                    Por favor ingrese su dirección de correo electrónico y complete la verificación. El correo electrónico registrado con Buyaladdin solo se puede verificar.<br />
+                    Una vez que haga clic en el botón 'Enviar', la cantidad solicitada se enviará a la dirección de la billetera.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="qna_lst">
+              <div class="qus por bef sc04">
+                Puedo usar la otra moneda dentro de Buyaladdin después de la solicitud “Enviar”?<i class="qus_arrow down poa"></i>
+              </div>
+              <div class="ans">
+                <div class="ans_inner">
+                  <p class="sc04">
+                    Sí, por favor tenga en cuenta que cuando solicita 'Enviar' USDT, la solicitud adicional de 'Enviar' no está disponible hasta que se complete la solicitud anterior. (Es posible utilizar otra moneda.)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //help_background -->
+    </div>
+
+    <!-- script -->
+    <script>
+      var acc = document.getElementsByClassName("qus"); //아코디언클래스리스트를 가져온다.
+      var i;
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          //클릭이벤트를 추가한다.
+          this.classList.toggle("active"); //클래스를 추가하거나 삭제함.
+
+          var panel = this.nextElementSibling; //현재 아코디언의 다음노트를 가져온다. ans이 옴
+          if (panel.style.height === "100px") {
+            //출력모드가 블럭인지 none인지 체크한다.
+            panel.style.height = "0px";
+          } else {
+            panel.style.height = "100px";
+          }
+        });
+      }
+    </script>
+    <!-- //script -->
+  </body>
+</html>
