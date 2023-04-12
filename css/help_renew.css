@@ -120,7 +120,7 @@ body.wbba {
   color: #6a6a6a;
   text-align: left;
   padding: 18px 40px;
-  word-break: break-all;
+  word-break: keep-all;
   line-height: 16.8px;
 }
 
@@ -170,7 +170,7 @@ body.wbba {
   font-size: 14px;
   color: #666;
   line-height: 1.6;
-  word-break: break-all;
+  word-break: keep-all;
 }
 .ans p.sc06 {
   margin-bottom: 5px;
